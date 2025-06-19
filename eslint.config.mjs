@@ -7,7 +7,9 @@ const compat = new FlatCompat({
  
 const eslintConfig = [
   ...compat.config({
-    extends: ['next']
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
+    extends: ['next', 'plugin:@typescript-eslint/recommended',]
   }),
 ]
  

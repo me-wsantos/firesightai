@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, { useEffect, useState, useRef } from 'react';
@@ -27,7 +29,6 @@ export const MapViewHistorical = () => {
   const mapRef = useRef(null);
   const map = useRef<L.Map | null>(null);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markersLayer = useRef<L.LayerGroup<any> | null>(null);
   interface FireData {
     latitude: number;
@@ -182,7 +183,6 @@ export const MapViewHistorical = () => {
       );
       map.current.fitBounds(bounds, { padding: [50, 50] });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fireData]);
 
   // Update region
@@ -229,7 +229,6 @@ export const MapViewHistorical = () => {
     };
 
     fetchFireData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [region, startDate]);
 
   return (

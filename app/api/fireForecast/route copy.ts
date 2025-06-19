@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 import { fetchWeatherApi } from 'openmeteo';
@@ -75,7 +77,6 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({...dataPrediction, prediction});
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function getFirePrediction(params: any) {
   const apiUrl = "https://fire-endpoint.azurewebsites.net/api/fire_prediction?code=G-evRK89sNgAmVjKwFNHAZ7u6uxerG5ItEqN-XU2xV_7AzFuCpUWBw==";
   const data = await axios.get(apiUrl, {params});
