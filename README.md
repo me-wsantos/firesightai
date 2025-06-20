@@ -1,5 +1,5 @@
 
-# 🔥 FireSight AI
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="35" height="35" /> FireSight AI
 
 <p align="center">
 <img 
@@ -8,7 +8,7 @@
 />
 </p>
 
-## 🚀 About The Project
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Classical%20Building.webp" alt="Classical Building" width="25" height="25" /> About The Project
 
 **FireSight AI** is a geospatial intelligence platform that leverages the power of **Machine Learning** on **Microsoft Azure** to predict high-risk wildfire ignition zones up to **48 hours in advance**.
 
@@ -18,11 +18,11 @@ FireSight AI is more than a dashboard. It's a comprehensive solution integrating
 
 ---
 
-### 🎥 [Check out our live demo!]()
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" /> [Check out our live demo!]() <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" />
 
 ---
 
-## ✨ Features
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="35" height="35" /> Features
 
 | Icon | Feature                    | Description                                                                 |
 |------|----------------------------|-----------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ FireSight AI is more than a dashboard. It's a comprehensive solution integrating
 
 ---
 
-## 🛠️ Technologies
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Smileys/Robot.webp" alt="Robot" width="25" height="25" /> Technologies
 
 This project uses modern **Cloud**, **AI**, and **Web** technologies with a strong emphasis on the **Microsoft Azure** ecosystem.
 
@@ -49,7 +49,7 @@ This project uses modern **Cloud**, **AI**, and **Web** technologies with a stro
 
 ---
 
-## 🧠 Architecture
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Brain.png" alt="Brain" width="25" height="25" /> Architecture
 
 The FireSight AI platform is composed of three main systems working together:
 
@@ -63,7 +63,7 @@ We also integrate **Copilot Studio** to provide an intelligent assistant capable
 
 ---
 
-## 🧪 AI & Model Engineering
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Test%20Tube.webp" alt="Test Tube" width="25" height="25" /> AI & Model Engineering
 
 Our model was trained using real-world ignition events from NASA and INPE, enriched with meteorological data via Open-Meteo API. A balanced dataset was created using a "Time-Shift" method for non-fire events.
 
@@ -72,7 +72,7 @@ The training process, API exposure, and validation steps are available in our:
 
 ---
 
-## 🚀 Getting Started
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Flags/Chequered%20Flag.webp" alt="Chequered Flag" width="25" height="25" /> Getting Started
 
 To run the project locally, follow the steps below:
 
@@ -81,24 +81,44 @@ To run the project locally, follow the steps below:
 git clone https://github.com/YOUR_USERNAME/FireSightAI.git
 cd FireSightAI
 
+1. Install dependencies:
+   npm install
+   or
+   yarn install
+   or
+   pnpm install
+   or
+   bun install
+
+2. Run the development server:
+   npm run dev
+   or
+   yarn dev
+   or
+   pnpm dev
+   or
+   bun dev
+
+3. Open your browser:
+   Visit [http://localhost:3000](http://localhost:3000) to use the app.
 ```
 
 You will need an Azure account, Open-Meteo API access, and Mapbox API key to run the full stack.
 
 ---
 
-## 📖 Documentation
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Books.webp" alt="Books" width="25" height="25" /> Documentation
 
 We believe that great documentation is key to open collaboration and adoption. Explore our dedicated guides:
 
 ### - 🤖 [Chatbot Documentation (Copilot Studio)](https://github.com/devcaiada/firesightai/blob/main/doc/chatbot/README.md)
 ### - 🧠 [ML Model Endpoint & API Gateway](https://github.com/devcaiada/firesightai/blob/main/doc/machine-learning-endpoint/README.md)
 ### - 🏋️ [Model Training Process](https://github.com/devcaiada/firesightai/blob/main/doc/machine-learning-model/README.md)
-### - 💾 [Front-end Architecture](https://github.com/devcaiada/firesightai/blob/main/doc/front-end/README.md)
+### - 💻 [Front-end Architecture](https://github.com/devcaiada/firesightai/blob/main/doc/front-end/README.md)
 
 ---
 
-## 🤝 Alignment with Microsoft AI Principles
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Handshake.webp" alt="Handshake" width="25" height="25" /> Alignment with Microsoft AI Principles
 
 FireSight AI was developed with a strong commitment to responsible and ethical AI, aligned with the core **Microsoft AI Principles**:
 
@@ -114,7 +134,7 @@ FireSight AI was developed with a strong commitment to responsible and ethical A
 > We believe that AI must be **empowering, ethical, and transparent** — especially when it deals with risks to human lives and natural ecosystems.
 
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="35" height="35" /> **Contact**
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="25" height="25" /> **Contact**
 For questions or suggestions, please contact us.
 
 | Caio Arruda  | Victor La Corte  | Wellington Santos  |
@@ -124,7 +144,7 @@ For questions or suggestions, please contact us.
 
 ---
 
-## 🌍 Vision
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Light%20Bulb.webp" alt="Light Bulb" width="25" height="25" /> Vision
 
 We're building a future where **AI empowers climate resilience**. FireSight AI aims to expand globally, integrating satellite feeds, drone imagery, and crowd-sourced reports to deliver **hyper-local** and **actionable wildfire intelligence**.
 
