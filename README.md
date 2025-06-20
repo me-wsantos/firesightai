@@ -118,6 +118,24 @@ We believe that great documentation is key to open collaboration and adoption. E
 
 ---
 
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Spiral%20Calendar.png" alt="Spiral Calendar" width="35" height="35" /> **Presentation**
+
+Follow our demonstration video and see live all the features of this powerful tool - **FireSight AI**.
+
+### Youtube video
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=v6kudNNhla0&ab_channel=CaioArruda">
+    <img src="https://github.com/me-wsantos/hackathon-ms/blob/main/assets/capa.png?raw=true" alt="Youtube">
+  </a>
+</p>
+
+### Power Point Presentation 
+
+[![ppt](https://github.com/me-wsantos/hackathon-ms/blob/main/assets/power-point-readme.png?raw=true)](https://github.com/devcaiada/firesightai/raw/refs/heads/main/asset/ppt-final/FireSight%20AI.ppsx)
+
+---
+
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Handshake.webp" alt="Handshake" width="25" height="25" /> Alignment with Microsoft AI Principles
 
 FireSight AI was developed with a strong commitment to responsible and ethical AI, aligned with the core **Microsoft AI Principles**:
