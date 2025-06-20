@@ -94,6 +94,8 @@ To handle training and evaluation with high-volume meteorological datasets from 
 - **Quota Type:** Dedicated  
 - **Purpose:** High-performance CPU and memory balance, ideal for time-series model training.
 
+![compute-vm-cara]()
+
 ---
 
 ## 🌍 Execution Environment
