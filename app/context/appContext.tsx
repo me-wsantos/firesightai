@@ -7,8 +7,8 @@ import { IAppContext, IDataPrediction, IMessage } from '../interfaces';
 const AppContext = createContext({} as IAppContext);
 
 export const AppContextProvider = ({ children }: any) => {
-  const [latitude, setLatitude] = useState(-15.7801);
-  const [longitude, setLongitude] = useState(-47.9292);
+  const [latitude, setLatitude] = useState(-15.7903);
+  const [longitude, setLongitude] = useState(-48.0428);
   const [startDate, setStartDate] = useState<string>(new Date().toISOString().split('T')[0]); //Format timezone -3 GMT
   const [startHour, setStartHour] = useState<number>(new Date().getHours());
   const [dataPrediction, setDataPrediction] = useState<IDataPrediction>({} as IDataPrediction);

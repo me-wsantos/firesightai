@@ -151,12 +151,6 @@ export const MapViewHistorical = () => {
             <tr><td><strong>Satellite:</strong></td><td>${fire.satellite}</td></tr>
             <tr><td><strong>Period:</strong></td><td>${fire.daynight === 'D' ? 'Day' : 'Night'}</td></tr>
           </table>
-          <button 
-            id="centerMapBtn-${index}"
-            style="margin-top: 10px; padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%;"
-          >
-            Analyze Fire
-          </button>
         </div>
       `;
 

@@ -8,7 +8,7 @@ export const Header = () => {
   const { activeMap, setActiveMap } = useAppContext();
 
   return (
-    <header className="bg-slate-800 border-b border-slate-700 h-20 flex items-center justify-between px-6">
+    <header className="invisible bg-slate-800 border-b border-slate-700 h-20 flex items-center justify-between px-6 md:visible lg:visible">
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-3">
           <div className="w-auto h-auto rounded-lg flex items-center justify-center">
