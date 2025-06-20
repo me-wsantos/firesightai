@@ -89,6 +89,8 @@ FireSight AI Front-End is a web application for wildfire risk prediction and mon
   - [`app/components/chatbot/ChatBot.tsx`](app/components/chatbot/ChatBot.tsx)  
     Integrates with Azure Bot Service via Direct Line.
 
+![arquitetura-front](https://github.com/devcaiada/firesightai/blob/main/asset/Arquitetura/wildfire-front-rg.png?raw=true)
+
 ---
 
 ## 🧩 Key Components

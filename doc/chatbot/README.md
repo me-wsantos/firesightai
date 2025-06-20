@@ -4,8 +4,8 @@ This document outlines the architecture, technologies, and implementation proces
 
 <p align="center">
 <img 
-    src="https://github.com/devcaiada/pandas-ebook-ai/blob/main/assets/Intro.png?raw=true"
-    width="450"  
+    src="https://github.com/devcaiada/firesightai/blob/main/public/doc/Fire-chat-logo.png?raw=true"
+    width="250"  
 />
 </p>
 
@@ -31,6 +31,7 @@ To build and deploy the chatbot in a robust, scalable, and secure manner, we use
 | 🔑 Azure Key Vault               | Secure vault for storing secrets, API keys, and connection strings.                    |
 | 💻 Bot Framework Template        | Starting point for development using the "Empty Bot" template with .NET Core 3.1.      |
 
+![chatbot-archotecture](https://github.com/devcaiada/firesightai/blob/main/asset/Arquitetura/chatbot-hackaton-rg.png?raw=true)
 ---
 
 ## ⚙️ Deployment Process
