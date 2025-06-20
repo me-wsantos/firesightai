@@ -77,6 +77,8 @@ The selected model was deployed as a **real-time online endpoint**, making it ac
 | **Instance Count**    | `3`                                            |
 | **VM Size**           | `Standard_DS1_v2` (1 vCPU, 3.5 GB RAM, 7 GB Disk) |
 
+[deploy-model-v3]()
+
 > **Deployment Rationale:** Inference workloads are lighter than training. Smaller VMs are sufficient and cost-effective. Running **3 instances** ensures **high availability** and **load balancing**, allowing the endpoint to serve multiple simultaneous requests efficiently.
 
 ---

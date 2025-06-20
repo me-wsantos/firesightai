@@ -2,6 +2,8 @@
 
 This document provides a detailed technical overview of the Machine Learning model used in the FireSight AI platform for wildfire risk prediction. It describes the training environment, scoring architecture, deployment process, and API gateway integration on Microsoft Azure.
 
+![arquitetura-endpoint](https://github.com/devcaiada/firesightai/blob/main/asset/Arquitetura/wildfire-endpoint.png?raw=true)
+
 ---
 
 ## 🎯 Predictive Model Endpoint on Azure
@@ -94,7 +96,7 @@ To handle training and evaluation with high-volume meteorological datasets from 
 - **Quota Type:** Dedicated  
 - **Purpose:** High-performance CPU and memory balance, ideal for time-series model training.
 
-![compute-vm-cara]()
+![compute-vm-cara](https://github.com/devcaiada/firesightai/blob/main/public/doc/compute-vm-cara.png?raw=true)
 
 ---
 
@@ -159,7 +161,9 @@ While Azure ML endpoints offer secure scoring capabilities, exposing them direct
 | **Default Domain**   | `https://fire-endpoint.azurewebsites.net`                 |
 | **Hosting Plan**     | `Flex Consumption` (auto-scales with traffic)              |
 | **Operating System** | Linux                                                      |
-| **Memory Allocated** | 2048 MB    
+| **Memory Allocated** | 2048 MB  
+
+![json-endpoint](https://github.com/devcaiada/firesightai/blob/main/public/doc/json-endpoint.png?raw=true)
 
 ### 📊 Endpoint Usage (Last 30 Days)
 
