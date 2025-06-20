@@ -1,129 +1,121 @@
-# FireSight AI Front-End Documentation
 
-FireSight AI Front-End is a web application for wildfire risk prediction and monitoring. It is built with [Next.js](https://nextjs.org), [React](https://react.dev), and [Tailwind CSS](https://tailwindcss.com). The frontend visualizes predictive and historical wildfire data, provides interactive filtering, and integrates an AI chatbot for wildfire insights.
+# 🔥 FireSight AI
 
-![fire-prediction]()
+<p align="center">
+<img 
+    src="https://github.com/devcaiada/firesightai/blob/main/public/doc/logo_horizontal_alternativo.png?raw=true"
+    width="500"  
+/>
+</p>
+
+## 🚀 About The Project
+
+**FireSight AI** is a geospatial intelligence platform that leverages the power of **Machine Learning** on **Microsoft Azure** to predict high-risk wildfire ignition zones up to **48 hours in advance**.
+
+Our mission is to **transform reactive data into proactive insights**, empowering emergency responders, urban planners, environmental agencies, and policymakers to **protect lives, ecosystems, and communities before the first flame appears**.
+
+FireSight AI is more than a dashboard. It's a comprehensive solution integrating geospatial data, predictive modeling, and an intelligent agent — all designed to offer **early warnings**, **actionable analytics**, and **real-time support**.
+
+---
+
+### 🎥 [Check out our live demo!]()
+
+---
+
+## ✨ Features
+
+| Icon | Feature                    | Description                                                                 |
+|------|----------------------------|-----------------------------------------------------------------------------|
+| 🔥   | Hotspot Prediction         | Identifies geographic coordinates with a high probability of fire ignition. |
+| 🗺️   | Interactive Heatmap       | Visualizes intensity and concentration of fire risk across regions.         |
+| 🤖   | AI Assistant with RAG      | Natural-language chatbot offering real-time insights and predictions.       |
+| 📚   | Scientific Knowledge Base  | Retrieval-Augmented Generation (RAG) using academic wildfire literature.    |
+| 📈   | Historical Data Analysis   | Query past fire data for strategic planning and pattern recognition.        |
+
+![historical-data](https://github.com/devcaiada/firesightai/blob/main/public/doc/historical-data.jpeg?raw=true)
+
+---
+
+## 🛠️ Technologies
+
+This project uses modern **Cloud**, **AI**, and **Web** technologies with a strong emphasis on the **Microsoft Azure** ecosystem.
+
+| Area            | Technologies                                                                 |
+|------------------|------------------------------------------------------------------------------|
+| Cloud & AI       | Azure Machine Learning Studio, Azure Functions, Azure App Service, Azure Container Registry, Microsoft Copilot Studio |
+| Backend & Model  | Python, FastAPI, .NET Core, Scikit-learn, XGBoost                           |
+| Frontend         | React, Mapbox GL, Typescript JS                                                         |
+| Data Sources     | NASA FIRMS, INPE Queimadas, Open-Meteo API                                  |
+
+---
+
+## 🧠 Architecture
+
+The FireSight AI platform is composed of three main systems working together:
+
+1. **Frontend** – A modern React web interface with an interactive map.
+2. **Azure Functions API Gateway** – Serves as the bridge between user requests, the ML model, and data services.
+3. **ML Backend (Azure ML)** – Hosts and serves the trained fire prediction model.
+
+We also integrate **Copilot Studio** to provide an intelligent assistant capable of accessing weather APIs and prediction endpoints through orchestrated flows.
+
+📄 For a complete overview, refer to our [Architecture Documentation](./architecture.md).
+
+---
+
+## 🧪 AI & Model Engineering
+
+Our model was trained using real-world ignition events from NASA and INPE, enriched with meteorological data via Open-Meteo API. A balanced dataset was created using a "Time-Shift" method for non-fire events.
+
+The training process, API exposure, and validation steps are available in our:
+- [💾 Dataset Construction Documentation](./dataset_documentation.md)
+- [🏋️ Model Training Documentation](./training_documentation.md)
+- [🧠 ML Model Documentation](./ml_model_documentation.md)
+- [🤖 Copilot Studio & Chatbot Documentation](./copilot_studio_documentation.md)
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   # or
-   bun install
-   ```
+To run the project locally, follow the steps below:
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/FireSightAI.git
+cd FireSightAI
 
-3. **Open your browser:**  
-   Visit [http://localhost:3000](http://localhost:3000) to use the app.
+# Follow the detailed guide here:
+# ➡️ Complete Installation Guide (coming soon)
+```
+
+You will need an Azure account, Open-Meteo API access, and Mapbox API key to run the full stack.
 
 ---
 
-## 🗂️ Project Structure
+## 📖 Documentation
 
-- `app/`
-  - `components/` – UI components (Map, Sidebar, Chatbot, etc.)
-  - `context/` – React context for global state ([`app/context/appContext.tsx`](app/context/appContext.tsx))
-  - `fonts/` – Custom fonts
-  - `interfaces/` – TypeScript interfaces
-  - `lib/` – Utility functions
-  - `service/` – API service functions
-  - `styles/` – Tailwind and global CSS
-  - `utils/` – Utility helpers
-  - `api/` – Next.js API routes (fire prediction, agents)
-- `public/images/` – Static images and logos
-- `asset/` – Project assets (architecture, presentations)
-- `doc/` – Documentation (ML model, endpoint, chatbot)
+We believe that great documentation is key to open collaboration and adoption. Explore our dedicated guides:
+
+- 🤖 [Chatbot Documentation (Copilot Studio)](./copilot_studio_documentation.md)
+- 🧠 [ML Model Endpoint & API Gateway](./ml_model_documentation.md)
+- 🏋️ [Model Training Process](./training_documentation.md)
+- 💾 [Dataset Construction](./dataset_documentation.md)
 
 ---
 
-## 🌍 Main Features
+## 👥 Team
 
-- **Interactive Map**
-  - Predictive wildfire risk map ([`app/components/MapViewPredictive.tsx`](app/components/MapViewPredictive.tsx))
-  - Historical fire data map ([`app/components/MapViewHistorical.tsx`](app/components/MapViewHistorical.tsx))
-  - Clickable map for location-based prediction
-  - Region selector for NASA FIRMS data
-
-- **Sidebar Filters**
-  - Date and time selection
-  - Real-time weather and fire risk indicators
-  - Meteorological variables display ([`app/components/FilterSidebar.tsx`](app/components/FilterSidebar.tsx))
-
-- **AI Chatbot**
-  - Embedded chatbot ([`app/components/chatbot/ChatBot.tsx`](app/components/chatbot/ChatBot.tsx))
-  - Integrates with Microsoft Azure Bot Framework and Copilot Studio
-
-- **Responsive UI**
-  - Tailwind CSS with custom design tokens
-  - Dark mode support
+| Name              | Role                             |
+|-------------------|----------------------------------|
+| [Your Name]       | Project Lead / Full-Stack Dev    |
+| [Colleague 1]     | Machine Learning Engineer        |
+| [Colleague 2]     | Frontend Developer               |
+| [Colleague 3]     | Data & Azure Specialist          |
 
 ---
 
-## 🔌 API Integrations
+## 🌍 Vision
 
-- **Fire Prediction:**  
-  - [`app/api/fireForecast/route.ts`](app/api/fireForecast/route.ts)  
-    Fetches weather data from Open-Meteo and predicts wildfire risk using an Azure ML endpoint.
+We're building a future where **AI empowers climate resilience**. FireSight AI aims to expand globally, integrating satellite feeds, drone imagery, and crowd-sourced reports to deliver **hyper-local** and **actionable wildfire intelligence**.
 
-- **Historical Fire Data:**  
-  - Fetches recent fire events from NASA FIRMS API.
-
-- **Chatbot:**  
-  - [`app/components/chatbot/ChatBot.tsx`](app/components/chatbot/ChatBot.tsx)  
-    Integrates with Azure Bot Service via Direct Line.
-
----
-
-## 🧩 Key Components
-
-- [`app/page.tsx`](app/page.tsx): Main page layout, map, sidebar, and chatbot
-- [`app/components/MapViewPredictive.tsx`](app/components/MapViewPredictive.tsx): Predictive fire risk map
-- [`app/components/MapViewHistorical.tsx`](app/components/MapViewHistorical.tsx): Historical fire data map
-- [`app/components/FilterSidebar.tsx`](app/components/FilterSidebar.tsx): Sidebar with filters and prediction details
-- [`app/components/chatbot/ChatBot.tsx`](app/components/chatbot/ChatBot.tsx): Embedded AI chatbot
-- [`app/context/appContext.tsx`](app/context/appContext.tsx): Global state management
-
----
-
-## ⚙️ Configuration
-
-- **Environment Variables:**  
-  - `NEXT_PUBLIC_DIRECT_LINE_SECRET` (for chatbot Direct Line)
-  - `NEXT_PUBLIC_NASA_API_KEY` (for NASA FIRMS API)
-
-- **Tailwind CSS:**  
-  - Configured in [`tailwind.config.ts`](tailwind.config.ts) and [`app/styles/index.css`](app/styles/index.css)
-
----
-
-## 🛠️ Scripts
-
-- `npm run dev` – Start development server
-- `npm run build` – Build for production
-- `npm run start` – Start production server
-- `npm run lint` – Lint code
-
----
-
-## 📦 Main Dependencies
-
-- Next.js, React, Tailwind CSS, Leaflet, Axios, Radix UI, Bot Framework WebChat, class-variance-authority, date-fns, openmeteo
-
----
+> Because the best way to fight fire — is before it starts.
