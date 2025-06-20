@@ -35,6 +35,8 @@ The first step was to register the dataset within Azure ML as a **versioned and 
 
 To accelerate experimentation and achieve optimal performance, we used **Azure's AutoML** to automate model development and hyperparameter tuning.
 
+![wildfire-job]()
+
 ### 🛠️ Configuration
 
 | Parameter              | Configuration                                  |
@@ -77,7 +79,7 @@ The selected model was deployed as a **real-time online endpoint**, making it ac
 | **Instance Count**    | `3`                                            |
 | **VM Size**           | `Standard_DS1_v2` (1 vCPU, 3.5 GB RAM, 7 GB Disk) |
 
-[deploy-model-v3]()
+![deploy-model-v3](https://github.com/devcaiada/firesightai/blob/main/public/doc/deploy-model-v3.png?raw=true)
 
 > **Deployment Rationale:** Inference workloads are lighter than training. Smaller VMs are sufficient and cost-effective. Running **3 instances** ensures **high availability** and **load balancing**, allowing the endpoint to serve multiple simultaneous requests efficiently.
 
