@@ -59,7 +59,7 @@ The FireSight AI platform is composed of three main systems working together:
 
 We also integrate **Copilot Studio** to provide an intelligent assistant capable of accessing weather APIs and prediction endpoints through orchestrated flows.
 
-📄 For a complete overview, refer to our [Architecture Documentation](./architecture.md).
+
 
 ---
 
@@ -68,10 +68,7 @@ We also integrate **Copilot Studio** to provide an intelligent assistant capable
 Our model was trained using real-world ignition events from NASA and INPE, enriched with meteorological data via Open-Meteo API. A balanced dataset was created using a "Time-Shift" method for non-fire events.
 
 The training process, API exposure, and validation steps are available in our:
-- [💾 Dataset Construction Documentation](./dataset_documentation.md)
-- [🏋️ Model Training Documentation](./training_documentation.md)
-- [🧠 ML Model Documentation](./ml_model_documentation.md)
-- [🤖 Copilot Studio & Chatbot Documentation](./copilot_studio_documentation.md)
+- [💾 Dataset Construction Documentation](https://github.com/devcaiada/firesightai/tree/main/doc/machine-learning-endpoint#-data-source)
 
 ---
 
@@ -84,8 +81,6 @@ To run the project locally, follow the steps below:
 git clone https://github.com/YOUR_USERNAME/FireSightAI.git
 cd FireSightAI
 
-# Follow the detailed guide here:
-# ➡️ Complete Installation Guide (coming soon)
 ```
 
 You will need an Azure account, Open-Meteo API access, and Mapbox API key to run the full stack.
@@ -96,21 +91,36 @@ You will need an Azure account, Open-Meteo API access, and Mapbox API key to run
 
 We believe that great documentation is key to open collaboration and adoption. Explore our dedicated guides:
 
-- 🤖 [Chatbot Documentation (Copilot Studio)](./copilot_studio_documentation.md)
-- 🧠 [ML Model Endpoint & API Gateway](./ml_model_documentation.md)
-- 🏋️ [Model Training Process](./training_documentation.md)
-- 💾 [Dataset Construction](./dataset_documentation.md)
+### - 🤖 [Chatbot Documentation (Copilot Studio)](https://github.com/devcaiada/firesightai/blob/main/doc/chatbot/README.md)
+### - 🧠 [ML Model Endpoint & API Gateway](https://github.com/devcaiada/firesightai/blob/main/doc/machine-learning-endpoint/README.md)
+### - 🏋️ [Model Training Process](https://github.com/devcaiada/firesightai/blob/main/doc/machine-learning-model/README.md)
+### - 💾 [Front-end Architecture](https://github.com/devcaiada/firesightai/blob/main/doc/front-end/README.md)
 
 ---
 
-## 👥 Team
+## 🤝 Alignment with Microsoft AI Principles
 
-| Name              | Role                             |
-|-------------------|----------------------------------|
-| [Your Name]       | Project Lead / Full-Stack Dev    |
-| [Colleague 1]     | Machine Learning Engineer        |
-| [Colleague 2]     | Frontend Developer               |
-| [Colleague 3]     | Data & Azure Specialist          |
+FireSight AI was developed with a strong commitment to responsible and ethical AI, aligned with the core **Microsoft AI Principles**:
+
+| Principle               | How We Apply It                                                                 |
+|-------------------------|----------------------------------------------------------------------------------|
+| **Fairness**            | Our model is trained on geographically diverse data to reduce regional bias.   |
+| **Reliability & Safety**| We validate predictions with historical weather data and offer transparency in how results are generated. |
+| **Privacy & Security** | No personal data is collected. All inputs are anonymized and securely processed in Azure. |
+| **Inclusiveness**       | FireSight AI is designed to serve both authorities and vulnerable communities equally. |
+| **Transparency**        | All prediction logic, dataset construction, and system prompts are documented openly. |
+| **Accountability**      | The system never provides legal or emergency advice and always encourages users to contact local authorities in case of real danger. |
+
+> We believe that AI must be **empowering, ethical, and transparent** — especially when it deals with risks to human lives and natural ecosystems.
+
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="35" height="35" /> **Contact**
+For questions or suggestions, please contact us.
+
+| Caio Arruda  | Victor La Corte  | Wellington Santos  |
+|:-----------:|:-----------:|:-----------:|
+|[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devcaiada)    | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-la-corte-348b81250/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
+
 
 ---
 
@@ -119,3 +129,9 @@ We believe that great documentation is key to open collaboration and adoption. E
 We're building a future where **AI empowers climate resilience**. FireSight AI aims to expand globally, integrating satellite feeds, drone imagery, and crowd-sourced reports to deliver **hyper-local** and **actionable wildfire intelligence**.
 
 > Because the best way to fight fire — is before it starts.
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="35" height="35" /> **Contribution** 
+
+Feel free to contribute to this repository. Open an issue or submit a pull request with your suggestions and improvements.
+
+**If this project was helpful to you, leave a star! This helps us a lot.** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="25" height="25" />
