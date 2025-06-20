@@ -2,7 +2,12 @@
 
 This document outlines the architecture, technologies, and implementation process of the decision-support chatbot for the FireSight AI project.
 
-![chatbot]()
+<p align="center">
+<img 
+    src="https://github.com/devcaiada/pandas-ebook-ai/blob/main/assets/Intro.png?raw=true"
+    width="450"  
+/>
+</p>
 
 ---
 
@@ -173,5 +178,51 @@ concat(
 ```
 
 > This output is passed directly to the next tool.
+
+### 2. 🔥 Fire Predict
+
+This tool runs the actual **fire prediction** using our deployed **Machine Learning model**.
+
+- **Trigger**: Called after `Get weather` returns successfully.
+- **Input**: The formatted weather data string.
+- **Action**: Invokes the **Azure Function Gateway** (`fire-endpoint`), which connects to our **ML model endpoint in Azure ML Studio**.
+- **Output**: Returns a **numeric fire probability between 0 and 1** (e.g., `0.895`).
+
+
+### ⛓️ Agent Orchestration: The Prediction Flow
+
+Following the `<instructions>` block in its prompt, the agent **orchestrates** the tools in logical order to fulfill the user’s request.
+
+### 🔄 Step-by-Step Flow
+
+1. **User Asks**:  
+   > “Could you check the fire risk for the Angeles National Forest?”
+
+2. **Agent Invokes `Get weather`**:  
+   - Recognizes the user’s intent and extracts the location.
+   - Triggers the first tool with the user-provided place.
+
+3. **Weather Data Returned**:  
+   - The flow returns the weather parameters in a formatted string.
+
+4. **Agent Invokes `Fire Predict`**:  
+   - Immediately triggers the second tool, passing the weather data.
+
+5. **Prediction Received**:  
+   - Returns a probability score (e.g., `0.753`).
+
+6. **Final Response**:  
+   - Converts score to percentage (`75.3%`).
+   - Responds to user in a clear, friendly, and actionable manner.
+
+![getweather-predict](https://github.com/devcaiada/firesightai/blob/main/public/doc/get-weather-predict.png?raw=true)
+
+---
+
+### ✅ Outcome
+
+This entire process — from user input to final prediction — is **efficiently and securely orchestrated** by the agent’s intelligence in **Copilot Studio**, enabling **FireSight AI** to be more than a chatbot: a **decision-support agent** for wildfire resilience.
+
+![test-chatbot](https://github.com/devcaiada/firesightai/blob/main/public/doc/test-chatbot.png?raw=true)
 
 > 🔬 **Using RAG with these sources enables the bot to deliver more accurate, relevant, and evidence-based responses**—far beyond the capabilities of a generic model.
