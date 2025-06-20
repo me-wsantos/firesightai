@@ -17,6 +17,75 @@ At the heart of our predictive system is a **Machine Learning model deployed as 
 
 ---
 
+## 📊 Data Source
+
+The performance of a Machine Learning model is directly dependent on the quality of its training data. This document outlines the methodological process used to construct the `dataset_final.csv` file — a robust and balanced dataset containing examples of conditions **with** and **without** fire occurrences.
+
+---
+
+### 🔥 Class 1: Points **WITH** Fire (`Target = 1`)
+
+The first step was to gather a comprehensive sample of locations and times where fires were detected.
+
+### 1.1. Obtaining Ignition Points
+
+To ensure broad geographical coverage, we relied on two primary data sources:
+
+| Region   | Data Source            | Link                                         |
+|----------|------------------------|----------------------------------------------|
+| 🇧🇷 Brazil   | NASA FIRMS (USFS)       | [firms.modaps.eosdis.nasa.gov](https://firms.modaps.eosdis.nasa.gov) |
+| 🇧🇷 Brazil | INPE Queimadas         | [dataserver-coids.inpe.br](https://dataserver-coids.inpe.br)          |
+
+These sources provided the essential fire event data: **latitude**, **longitude**, **date**, and **time of detection**.
+
+### 1.2. Enrichment with Meteorological Data
+
+An ignition point alone is not enough — we must understand the **weather conditions** at the exact time of the event. For that, we used the following API:
+
+- **API Used**: [Open-Meteo Historical Weather API](https://open-meteo.com)
+
+For each fire point, we called this API using the **latitude**, **longitude**, **date**, and **time**, retrieving variables such as:
+
+- Temperature  
+- Relative humidity  
+- Precipitation  
+- Wind speed  
+- And more
+
+
+### 🌲 Class 2: Points **WITHOUT** Fire (`Target = 0`)
+
+Creating the "no fire" class is a challenge. Simply selecting random points on the map could introduce bias, as geographic and seasonal conditions would vary. To solve this, we adopted a **Time-Shift** strategy.
+
+### 2.1. The Time-Shift Strategy
+
+- **Coordinate Reuse**: For each Class 1 point, we reused the same **latitude** and **longitude**.
+- **Temporal Shift**: We subtracted **15 days** from the original fire event date.
+- **Weather Enrichment**: We called the same Open-Meteo API to fetch meteorological data for this new time (same location, 15 days earlier).
+
+> 💡 This technique allows us to create an almost perfect counterexample: the **same location**, observed at two **different moments** — one with fire and one, presumably, without. This helps the model focus on the **weather variations** that lead to ignition.
+
+### 2.2. Challenges and Solutions
+
+- **API Limitation**: The Open-Meteo API allows up to **10,000 requests per day**.
+- **Solution**: A script was developed to automate data collection over multiple days, with programmed pauses to comply with the daily limit.
+
+
+### 🔗 Final Dataset Merge and Cleaning
+
+Once both classes were built, the following steps were performed:
+
+- **Action**: The "with fire" and "without fire" datasets were combined.
+- **Integrity Check**: We ensured that **no point** (same latitude, longitude, and date) appeared in both classes at the same time.
+
+
+### ✅ Result
+
+The result of this meticulous process is the `dataset_final.csv` file:  
+A **clean, balanced, and enriched** dataset that served as the foundation for training all of our prediction models in **Azure Machine Learning**.
+
+---
+
 ## ⚙️ Compute Infrastructure
 
 To handle training and evaluation with high-volume meteorological datasets from **NASA FIRMS** and **NOAA**, a powerful compute instance was provisioned on Azure ML.
