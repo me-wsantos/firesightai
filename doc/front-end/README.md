@@ -49,7 +49,7 @@ FireSight AI Front-End is a web application for wildfire risk prediction and mon
   - `api/` – Next.js API routes (fire prediction, agents)
 - `public/images/` – Static images and logos
 - `asset/` – Project assets (architecture, presentations)
-- `doc/` – Documentation (ML model, endpoint, chatbot)
+- `doc/` – Documentation (ML model, endpoint, chatbot, front-end)
 
 ---
 
