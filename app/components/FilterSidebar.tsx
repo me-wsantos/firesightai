@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Calendar } from 'lucide-react';
 import useAppContext from '../context/appContext';
@@ -64,7 +64,6 @@ export const FilterSidebar = () => {
 
       { activeMap === 'predictive' && 
         <Card className="bg-slate-700 border-slate-600 p-6">
-
 
           {isLoading ? (
             <div className="flex flex-col items-center justify-center h-64">

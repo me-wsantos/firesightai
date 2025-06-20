@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 import { extractJsonMarkdown } from '../utils/extractJsonMarkdown';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const chatService = async (llmContext: string[], dataAnalysis: any[] = []) => {
   try {
     const result = await axios.post(`/api/agents/supervisor`, { llmContext })
@@ -44,7 +44,6 @@ export const chatService = async (llmContext: string[], dataAnalysis: any[] = []
       if (objResponse.type != "pie") {
         // Extrai somente os nomes e valores
 
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const orderData = objResponse.category.map((item: any, index: number) => {
           return { name: item, value: objResponse.series[index] }
         })
@@ -53,15 +52,12 @@ export const chatService = async (llmContext: string[], dataAnalysis: any[] = []
         objResponse.order = orderData;
 
         //ordena os dados por valor
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         objResponse.order.sort((a: any, b: any) => b.value - a.value);
 
         // Cria o objeto dataGraph com os dados formatados
         const dataGraph = {
           type: objResponse.type,
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           category: objResponse.order.map((item: any) => item.name),
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           series: objResponse.order.map((item: any) => item.value),
           message: objResponse.message,
           title: objResponse.title,
@@ -81,7 +77,6 @@ export const chatService = async (llmContext: string[], dataAnalysis: any[] = []
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const dataAnalysisRun = async (llmContext: string[], dataAnalysis: any[]) => {
   try {
     const result = await axios.post(`/api/agents/dataAnalyst`, { llmContext, dataAnalysis })
@@ -103,7 +98,6 @@ const auditorRun = async (llmContext: string[]) => {
     return { ok: false, error }
   }
 }
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const chartRun = async (llmContext: string[], dataAnalysis: any[]) => {
   try {
     const result = await axios.post(`/api/agents/chart`, { llmContext, dataAnalysis })

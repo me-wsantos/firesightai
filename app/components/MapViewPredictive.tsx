@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import React, { useEffect, useRef } from 'react';
@@ -21,13 +23,11 @@ export const MapViewPredictive = () => {
   const mapRef = useRef(null);
   const map = useRef<L.Map | null>(null);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const markersLayer = useRef<L.LayerGroup<any> | null>(null);
 
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const data: any = await fireForecastService({
         startDate,
         startHour,
@@ -39,7 +39,6 @@ export const MapViewPredictive = () => {
     };
 
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latitude, longitude, startDate, startHour]);
 
   useEffect(() => {
@@ -59,10 +58,8 @@ export const MapViewPredictive = () => {
     return () => {
       map.current?.remove();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function onMapClick(e: any) {
     const { lat, lng } = e.latlng
     const popup = L.popup();
@@ -92,7 +89,6 @@ export const MapViewPredictive = () => {
       opacity: 1,
       fillOpacity: 0.3
     }).addTo(map.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latitude, longitude]);
 
   return (

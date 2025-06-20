@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IDataPrediction {
   latitude: number
   longitude: number
@@ -40,7 +41,6 @@ export interface IAppContext {
   activeMap: 'predictive' | 'historical'
   setActiveMap(value: 'predictive' | 'historical'): void
   messages: IMessage[],
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setMessages(value: any):void
   llmContext: string[]
   setLlmContext(value: string[]): void
