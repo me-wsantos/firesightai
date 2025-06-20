@@ -2,7 +2,7 @@
 
 FireSight AI Front-End is a web application for wildfire risk prediction and monitoring. It is built with [Next.js](https://nextjs.org), [React](https://react.dev), and [Tailwind CSS](https://tailwindcss.com). The frontend visualizes predictive and historical wildfire data, provides interactive filtering, and integrates an AI chatbot for wildfire insights.
 
-![fire-prediction]()
+![fire-prediction](https://github.com/devcaiada/firesightai/blob/main/public/doc/fire-prediction.jpeg?raw=true)
 
 ---
 

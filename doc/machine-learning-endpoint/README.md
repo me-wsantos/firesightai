@@ -113,14 +113,20 @@ import json
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 EXPECTED_FIELDS = [
-    "latitude", "longitude", "temperature_2m", "relative_humidity_2m",
-    "precipitation", "wind_speed_10m", "cloud_cover", "surface_pressure",
-    "pressure_msl", "et0_fao_evapotranspiration", "soil_temperature_0_to_7cm",
-    "daily_precipitation_sum", "daily_temperature_2m_max"
+    "temperature_2m",
+    "relative_humidity_2m",
+    "wind_speed_10m",
+    "surface_pressure",
+    "et0_fao_evapotranspiration",
+    "soil_temperature_0_to_7cm",
+    "soil_moisture_0_to_7cm",
+    "vapour_pressure_deficit",
+    "shortwave_radiation_instant",
+    "boundary_layer_height"
 ]
 
-API_URL = "https://wildfire-hackaton-endpoint-v2.eastus2.inference.ml.azure.com/score"
-API_KEY = "YOUR_ML_ENDPOINT_KEY_HERE"
+API_URL = "https://wildfire-hackathon-endpoint-v2.eastus2.inference.ml.azure.com/score"
+API_KEY = ""
 
 @app.route(route="fire_prediction")
 def fire_prediction(req: func.HttpRequest) -> func.HttpResponse:
@@ -131,6 +137,7 @@ def fire_prediction(req: func.HttpRequest) -> func.HttpResponse:
     except ValueError:
         req_body = {key: req.params.get(key) for key in EXPECTED_FIELDS}
 
+    # Verifica se todos os campos esperados estão presentes
     missing = [field for field in EXPECTED_FIELDS if field not in req_body]
     if missing:
         return func.HttpResponse(
@@ -139,10 +146,12 @@ def fire_prediction(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     try:
+        # Cria dicionário com valores convertidos para float
         input_data = {field: float(req_body[field]) for field in EXPECTED_FIELDS}
     except ValueError as e:
         return func.HttpResponse(f"Invalid input format: {e}", status_code=400)
 
+    # Monta o payload no formato esperado pelo modelo
     payload = json.dumps({
         "Inputs": {
             "data": [input_data]
@@ -151,7 +160,6 @@ def fire_prediction(req: func.HttpRequest) -> func.HttpResponse:
 
     headers = {
         "Content-Type": "application/json",
-        "Accept": "application/json",
         "Authorization": f"Bearer {API_KEY}"
     }
 
