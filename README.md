@@ -100,7 +100,7 @@ cd FireSightAI
    bun dev
 
 3. Open your browser:
-   Visit [http://localhost:3000](http://localhost:3000) to use the app.
+   Visit http://localhost:3000 to use the app.
 ```
 
 You will need an Azure account, Open-Meteo API access, and Mapbox API key to run the full stack.
