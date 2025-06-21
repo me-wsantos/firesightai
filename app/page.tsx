@@ -1,8 +1,9 @@
 "use client"
 
-import { Header, FilterSidebar, HotspotDetails, NavbarMobile } from "./components";
-//import { FilterSidebar } from "./components/FilterSidebar";
-//import { HotspotDetails } from "./components/HotspotDetails";
+import { NavbarMobile } from "./components/NavbarMobile";
+import { Navbar } from "./components/Navbar";
+import { FilterSidebar } from "./components/FilterSidebar";
+import { HotspotDetails } from "./components/HotspotDetails";
 import dynamic from "next/dynamic";
 import useAppContext from "./context/appContext";
 
@@ -47,7 +48,7 @@ export default function Home() {
   
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      <Header />
+      <Navbar />
       <NavbarMobile />
       
       <div className="flex flex-col md:flex-row lg:h-[calc(100vh-60px)]">

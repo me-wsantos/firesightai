@@ -15,9 +15,6 @@ export const AppContextProvider = ({ children }: any) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [activeMap, setActiveMap] = useState<'predictive' | 'historical'>('predictive');
   const [messages, setMessages] = useState<IMessage[]>([]);
-  /* const [llmContext, setLlmContext] = useState<string[]>([`Hello! Welcome to the Virtual Assistant for Fire Prevention and Safety. 
-    I&apos;m here to help you clarify any questions and provide reliable information on fire-related topics. Just ask me!
-    I&apos;m ready to offer clear and objective guidance. Your safety is our top priority.`]); */
   const [llmContext, setLlmContext] = useState<string[]>([`Hi there! I&apos;m your Wildfire Assistant.
     I&apos;m here to help you better understand wildfires — from satellite data and fire detection to trends, terminology, and prevention tips.
     What would you like to know today?`]);
