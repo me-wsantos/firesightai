@@ -1,6 +1,7 @@
 "use client"
 
-import { Header } from "./components/Header";
+import { NavbarMobile } from "./components/NavbarMobile";
+import { Navbar } from "./components/Navbar";
 import { FilterSidebar } from "./components/FilterSidebar";
 import { HotspotDetails } from "./components/HotspotDetails";
 import dynamic from "next/dynamic";
@@ -47,9 +48,10 @@ export default function Home() {
   
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      <Header />
-
-      <div className="flex h-[calc(100vh-60px)]">
+      <Navbar />
+      <NavbarMobile />
+      
+      <div className="flex flex-col md:flex-row lg:h-[calc(100vh-60px)]">
         <FilterSidebar />
         <main className="flex-1 relative mt-12">
           { activeMap === "predictive" ? <MapViewPredictive /> : <MapViewHistorical /> }

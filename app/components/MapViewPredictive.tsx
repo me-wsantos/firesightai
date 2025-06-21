@@ -45,7 +45,7 @@ export const MapViewPredictive = () => {
     if (!mapRef.current) return;
 
     // Create map
-    map.current = L.map(mapRef.current).setView([latitude, longitude], 13);
+    map.current = L.map(mapRef.current).setView([latitude, longitude], 5);
 
     // Add tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -61,7 +61,7 @@ export const MapViewPredictive = () => {
   }, []);
 
   function onMapClick(e: any) {
-    const { lat, lng } = e.latlng
+    const { lat, lng } = e.latlng || { lat: latitude, lng: longitude };
     const popup = L.popup();
 
     setLatitude(lat);
@@ -70,7 +70,7 @@ export const MapViewPredictive = () => {
     if (!map.current) return;
 
     popup
-      .setLatLng(e.latlng)
+      .setLatLng(e.latlng || { lat: latitude, lng: longitude })
       .setContent(`🔥 Fire prediction on the map at Lat.: ${latitude.toFixed(2)} | Long.: ${longitude.toFixed(2)}`)
       .openOn(map.current);
   }
