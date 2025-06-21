@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "ykwn9fptITYLxGPcA2yoUsjnhcbMfwVuvSDixVbX0Yo=",
+  "Source": "HackathonBot",
+  "BasePath": "_content/HackathonBot",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HackathonBot\\wwwroot",
+      "Source": "HackathonBot",
+      "ContentRoot": "C:\\Users\\VictorEvangelista\\OneDrive - Accelera\\Área de Trabalho\\hackathon\\HackathonBot\\HackathonBot\\wwwroot\\",
+      "BasePath": "_content/HackathonBot",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\VictorEvangelista\\OneDrive - Accelera\\Área de Trabalho\\hackathon\\HackathonBot\\HackathonBot\\wwwroot\\default.htm",
+      "SourceId": "HackathonBot",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VictorEvangelista\\OneDrive - Accelera\\Área de Trabalho\\hackathon\\HackathonBot\\HackathonBot\\wwwroot\\",
+      "BasePath": "_content/HackathonBot",
+      "RelativePath": "default#[.{fingerprint}]?.htm",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kphu1ln41j",
+      "Integrity": "2MVwiTmP9Njt5Sr6T/wlqpNtrI+XKp2jXzWeBxV6F/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.htm"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "default.htm",
+      "AssetFile": "C:\\Users\\VictorEvangelista\\OneDrive - Accelera\\Área de Trabalho\\hackathon\\HackathonBot\\HackathonBot\\wwwroot\\default.htm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2MVwiTmP9Njt5Sr6T/wlqpNtrI+XKp2jXzWeBxV6F/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 21:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2MVwiTmP9Njt5Sr6T/wlqpNtrI+XKp2jXzWeBxV6F/0="
+        }
+      ]
+    },
+    {
+      "Route": "default.kphu1ln41j.htm",
+      "AssetFile": "C:\\Users\\VictorEvangelista\\OneDrive - Accelera\\Área de Trabalho\\hackathon\\HackathonBot\\HackathonBot\\wwwroot\\default.htm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2MVwiTmP9Njt5Sr6T/wlqpNtrI+XKp2jXzWeBxV6F/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 21:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kphu1ln41j"
+        },
+        {
+          "Name": "label",
+          "Value": "default.htm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2MVwiTmP9Njt5Sr6T/wlqpNtrI+XKp2jXzWeBxV6F/0="
+        }
+      ]
+    }
+  ]
+}
