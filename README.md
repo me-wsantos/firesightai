@@ -18,7 +18,7 @@ FireSight AI is more than a dashboard. It's a comprehensive solution integrating
 
 ---
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" /> [Check out our live demo!]() <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" />
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" /> [Check out our live demo!](https://firesightai.vercel.app/) <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" />
 
 ---
 
@@ -125,14 +125,15 @@ Follow our demonstration video and see live all the features of this powerful to
 ### Youtube video
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=v6kudNNhla0&ab_channel=CaioArruda">
-    <img src="https://github.com/me-wsantos/hackathon-ms/blob/main/assets/capa.png?raw=true" alt="Youtube">
+  <a href="https://youtu.be/hcA3kXotMQQ">
+    <img src="https://github.com/devcaiada/firesightai/blob/main/public/doc/yt-folder.png?raw=true" alt="Youtube" width="500">
+    
   </a>
 </p>
 
 ### Power Point Presentation 
 
-[![ppt](https://github.com/me-wsantos/hackathon-ms/blob/main/assets/power-point-readme.png?raw=true)](https://github.com/devcaiada/firesightai/raw/refs/heads/main/asset/ppt-final/FireSight%20AI.ppsx)
+[![ppt](https://github.com/devcaiada/firesightai/blob/main/public/doc/power-point-readme.png?raw=true)](https://github.com/devcaiada/firesightai/raw/refs/heads/main/asset/ppt-final/FireSight%20AI.ppsx)
 
 ---
 
@@ -155,9 +156,10 @@ FireSight AI was developed with a strong commitment to responsible and ethical A
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="25" height="25" /> **Contact**
 For questions or suggestions, please contact us.
 
-| Caio Arruda  | Victor La Corte  | Wellington Santos  |
-|:-----------:|:-----------:|:-----------:|
-|[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devcaiada)    | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-la-corte-348b81250/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
+| Brendo Enomoto | Caio Arruda  | Victor La Corte  | Wellington Santos  |
+|:--------------:|:------------:|:----------------:|:------------------:|
+| [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brendo-enomoto/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/devcaiada) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-la-corte-348b81250/) | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
+
 
 
 ---
