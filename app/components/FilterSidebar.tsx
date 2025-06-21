@@ -1,5 +1,6 @@
 "use client"
-
+import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import useAppContext from '../context/appContext';
 import { Card } from './Card';
@@ -57,12 +58,35 @@ export const FilterSidebar = () => {
           Select Date
         </h3>
         <Popover>
-            <CalendarComponent/>
+          <CalendarComponent />
         </Popover>
       </Card>
 
+      {activeMap === 'historical' &&
+        <div className="text-base text-gray-400 pt-4">
+          <span className="font-semibold text-white">Data source:</span>
+          <div>
+            <Link
+              href="https://firms.modaps.eosdis.nasa.gov/"
+              target="_blank"
+              className="text-blue-400 hover:underline"
+            >
+              FIRMS - Fire Information for Resources Management System
+            </Link>
+          </div>
+          <div className="w-auto h-auto rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/nasa_logo_white.png"
+              alt="FireSight AI Logo"
+              width={150}
+              height={50}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      }
 
-      { activeMap === 'predictive' && 
+      {activeMap === 'predictive' &&
         <Card className="bg-slate-700 border-slate-600 p-6">
 
           {isLoading ? (
@@ -74,10 +98,10 @@ export const FilterSidebar = () => {
             <>
               <div className="text-center mb-4">
                 <h3 className={`text-lg font-semibold mb-2 ${getRiskColor()}`}>
-                  { getRiskText() } 
+                  {getRiskText()}
                 </h3>
                 <div className="text-5xl font-bold mb-2 text-gray-300">
-                  { prediction ? (prediction * 100 > 100 ? 100 : prediction * 100).toFixed(0) : 0 }<span className="text-2xl text-slate-300"> %</span>
+                  {prediction ? (prediction * 100 > 100 ? 100 : prediction * 100).toFixed(0) : 0}<span className="text-2xl text-slate-300"> %</span>
                 </div>
               </div>
 
@@ -88,7 +112,7 @@ export const FilterSidebar = () => {
                     {latitude && latitude.toFixed(4)}
                   </span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Longitude:</span>
                   <span className="font-mono text-sm text-slate-300">
@@ -117,32 +141,32 @@ export const FilterSidebar = () => {
                   <span className="text-slate-400 text-sm">Evapotranspiration (ET₀):</span>
                   <span className="text-slate-300 text-sm">{et0_fao_evapotranspiration && et0_fao_evapotranspiration.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Soil Temperature (0-7 cm):</span>
                   <span className="text-slate-300 text-sm">{soil_temperature_0_to_7cm && soil_temperature_0_to_7cm.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Surface pressure:</span>
                   <span className="text-slate-300 text-sm">{surface_pressure && surface_pressure.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Soil Moisture (0-7 cm):</span>
                   <span className="text-slate-300 text-sm">{soil_moisture_0_to_7cm && soil_moisture_0_to_7cm.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Vapour Pressure Deficit:</span>
                   <span className="text-slate-300 text-sm">{vapour_pressure_deficit && vapour_pressure_deficit.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Shortwave Radiation Sum:</span>
                   <span className="text-slate-300 text-sm">{shortwave_radiation_instant && shortwave_radiation_instant.toFixed(1)}</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center hover:bg-gray-600 px-2 my-0">
                   <span className="text-slate-400 text-sm">Boundary Layer Height PBL:</span>
                   <span className="text-slate-300 text-sm">{boundary_layer_height && boundary_layer_height.toFixed(0)}</span>

@@ -2,7 +2,8 @@
 import { useState } from 'react'
 import Image from 'next/image';
 import useAppContext from '../context/appContext';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github } from 'lucide-react';
+import Link from 'next/link';
 
 export const NavbarMobile = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -36,30 +37,45 @@ export const NavbarMobile = () => {
       </div>
 
       {showMenu &&
-        <div className="w-full flex justify-between py-4 px-6 bg-custom-blue-light 1sm:items-end bg-gray-600">
+        <div className="w-full flex flex-col items-end py-4 px-6 bg-custom-blue-light 1sm:items-end bg-gray-600">
 
           <div
-            className="w-[50%] flex justify-end text-base text-end text-white p-2 hover:text-blue-300 bg-gray-800 rounded-xl mr-2 "
+            className="w-[50%] flex justify-between text-base text-end text-white p-2 hover:text-blue-300 bg-gray-800 rounded-xl"
             onClick={() => [setActiveMap('predictive'), setShowMenu(false)]}
           >
-            <div className="w-6 h-6  flex items-center justify-center mr-4">
+            <div className="w-6 h-6  flex items-center justify-center mr-4 pl-3">
               🔥
             </div>
-              <span>Fire Prediction</span>
+            <span className="pr-4">Fire Prediction</span>
           </div>
 
           <div
-            className="w-[50%] flex justify-end text-base text-end text-white p-2 hover:text-blue-300 bg-gray-800 rounded-xl ml-2 "
+            className="w-[50%] flex justify-between text-base text-end text-white p-2 hover:text-blue-300 bg-gray-800 rounded-xl mt-2"
             onClick={() => [setActiveMap('historical'), setShowMenu(false)]}
           >
-            <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-4">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
+            <div className="w-6 h-6  flex items-center justify-center mr-4 pl-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
             </div>
-            <span>Historical Data</span>
+            <span className="pr-4">Historical Data</span>
+          </div>
+
+          <div
+            className="w-[50%] flex justify-between text-base text-end text-white p-2 hover:text-blue-300 bg-gray-800 rounded-xl mt-2"
+          >
+            <div className="w-6 h-6  flex items-center justify-center mr-4">
+              <Github className="w-10 h-10 ml-2" color='#f97316' />
+            </div>
+            <Link
+              href="https://github.com/devcaiada/firesightai/tree/main" target="_blank"
+              className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors cursor-pointer"
+            >
+              <span className="pr-4">GitHub</span>
+            </Link>
           </div>
 
         </div>
       }
+
     </nav>
   )
 }
